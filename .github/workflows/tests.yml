@@ -24,11 +24,11 @@ jobs:
     #- run: echo ${{ matrix.dim1 }}-${{ matrix.dim2 }} 
     #  name: Use ${{ matrix.dim1 }}-${{ matrix.dim2 }}  
     - uses: LouisBrunner/checks-action@v1.6.0
-        if: always()
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Test XYZ
-          conclusion: ${{ job.status }}
-          output: |
-            {"summary":"${{ matrix.dim1 }}-${{ matrix.dim2 }}"}
+      if: always()
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        name: Test XYZ
+        conclusion: ${{ job.status }}
+        output: |
+          {"summary":"${{ matrix.dim1 }}-${{ matrix.dim2 }}"}
 
