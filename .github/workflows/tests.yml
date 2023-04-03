@@ -27,7 +27,7 @@ jobs:
       if: always()
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        name: Test XYZ
+        name: Test XYZ ${{ matrix.dim1 }}-${{ matrix.dim2 }}
         conclusion: ${{ job.status }}
         output: |
           {"summary":"${{ matrix.dim1 }}-${{ matrix.dim2 }}"}
