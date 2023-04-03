@@ -28,7 +28,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         name: Test XYZ ${{ matrix.dim1 }}-${{ matrix.dim2 }}
-        sha: 3cc3831d3e46307e85aa84445d0ece3f23bad2d4
+        sha: 12582843fa092930d11f863f5e2b567bc3845819
         conclusion: ${{ job.status }}
         output: |
           {"summary":"${{ matrix.dim1 }}-${{ matrix.dim2 }}"}
