@@ -1,0 +1,23 @@
+name: Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        dim1: ["d1.1", "d1.2"]
+        dim2: ["d2.1", "d2.2"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.dim1 }}-${{ matrix.dim2 }}      
+    - run: echo ${{ matrix.dim1 }}-${{ matrix.dim2 }} 
+
