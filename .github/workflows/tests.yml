@@ -18,6 +18,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.dim1 }}-${{ matrix.dim2 }}      
+      id: s1
     - run: echo ${{ matrix.dim1 }}-${{ matrix.dim2 }} 
+      name: Use Node.js ${{ matrix.dim1 }}-${{ matrix.dim2 }}      
 
